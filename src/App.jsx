@@ -9,6 +9,13 @@ import Technologies from "./components/Zadaniecztery.jsx";
 import Student_dwa from "./components/Student_dwa.jsx";
 import Book from "./components/Book.jsx";
 import TechnologyDestructuring from "./components/TechnologyDestructuring.jsx";
+import Product from "./components/Product.jsx";
+
+function showProduct(name, price)
+    {
+        console.log("Nazwa produktu: " + name);
+        console.log("Cena produktu: " + price);
+    }
 
 const technologies = [
   {
@@ -105,6 +112,12 @@ function App() {
             )
           })
         }
+
+        <Product 
+        name={"sixseven"}
+        price={67}
+        showProduct={showProduct}
+        />
 
       </main>
 
