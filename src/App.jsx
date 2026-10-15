@@ -11,6 +11,7 @@ import Book from "./components/Book.jsx";
 import TechnologyDestructuring from "./components/TechnologyDestructuring.jsx";
 import Product from "./components/Product.jsx";
 import Technologiesx from "./components/Technologiesx.jsx";
+import Counter from "./components/Counter.jsx";
 
 const technologiesx = [
   { id: 1, name: "React", category: "Frontend", hours: 30, image: "react.webp" },
@@ -138,6 +139,8 @@ function App() {
       <article id="obrazki">
         <Technologiesx technologies={technologiesx} />
       </article>
+
+      <Counter/>
     </>
   );
 }
