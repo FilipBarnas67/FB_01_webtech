@@ -10,12 +10,24 @@ import Student_dwa from "./components/Student_dwa.jsx";
 import Book from "./components/Book.jsx";
 import TechnologyDestructuring from "./components/TechnologyDestructuring.jsx";
 import Product from "./components/Product.jsx";
+import Technologiesx from "./components/Technologiesx.jsx";
 
-function showProduct(name, price)
-    {
-        console.log("Nazwa produktu: " + name);
-        console.log("Cena produktu: " + price);
-    }
+const technologiesx = [
+  { id: 1, name: "React", category: "Frontend", hours: 30, image: "react.webp" },
+  { id: 2, name: "Node.js", category: "Backend", hours: 40, image: "nodejs.webp" },
+  { id: 3, name: "MySQL", category: "Baza danych", hours: 20, image: "mysql.webp" },
+  { id: 4, name: "Express", category: "Backend", hours: 25, image: "express.webp" },
+  { id: 5, name: "MongoDB", category: "Baza danych", hours: 30, image: "mongodb.webp" },
+  { id: 6, name: "Bootstrap", category: "Frontend", hours: 15, image: "bootstrap.webp" },
+  { id: 7, name: "CSS", category: "Frontend", hours: 20, image: "css.webp" },
+  { id: 8, name: "HTML", category: "Frontend", hours: 10, image: "html.webp" },
+  { id: 9, name: "PHP", category: "Backend", hours: 35, image: "php.webp" }
+];
+
+function showProduct(name, price) {
+  console.log("Nazwa produktu: " + name);
+  console.log("Cena produktu: " + price);
+}
 
 const technologies = [
   {
@@ -81,12 +93,12 @@ function App() {
 
         {
           technologies.map((technologia) => {
-            return(
+            return (
               <TechnologyDestructuring
-              key={technologia.id}
-              name={technologia.name}
-              category={technologia.category}
-              hours={technologia.hours}
+                key={technologia.id}
+                name={technologia.name}
+                category={technologia.category}
+                hours={technologia.hours}
               />
             )
           })
@@ -113,15 +125,19 @@ function App() {
           })
         }
 
-        <Product 
-        name={"sixseven"}
-        price={67}
-        showProduct={showProduct}
+        <Product
+          name={"sixseven"}
+          price={67}
+          showProduct={showProduct}
         />
 
       </main>
 
       <Footer />
+
+      <article id="obrazki">
+        <Technologiesx technologies={technologiesx} />
+      </article>
     </>
   );
 }
